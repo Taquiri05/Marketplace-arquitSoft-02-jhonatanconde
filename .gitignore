@@ -5,3 +5,7 @@ Thumbs.db
 # Archivos temporales de editores
 *.tmp
 *.swp
+
+# Boilerplate de referencia (Angular) - solo se versiona el codigo fuente
+tecnologia/boilerplate-clean-arquitecture/node_modules/
+tecnologia/boilerplate-clean-arquitecture/.angular/
