@@ -46,6 +46,7 @@ flowchart TD
         Pago["Pasarela de pago"]
         ERP["ERP"]
         Envio["Servicio de envío"]
+        Facturacion["Servicio de Facturación"]
     end
 
     %% =========================
@@ -71,6 +72,7 @@ flowchart TD
 
     Pago ~~~ ERP
     ERP ~~~ Envio
+    Envio ~~~ Facturacion
 
     %% =========================
     %% ESTILOS
@@ -98,6 +100,7 @@ flowchart TD
     style Pago fill:#222,stroke:#fff,color:#fff
     style ERP fill:#222,stroke:#fff,color:#fff
     style Envio fill:#222,stroke:#fff,color:#fff
+    style Facturacion fill:#222,stroke:#fff,color:#fff
 ```
 
 ## Descripción
@@ -108,4 +111,4 @@ La arquitectura inicial se organiza en tres capas principales:
 - **Lógica de negocio:** contiene los principales módulos responsables de las funcionalidades del sistema: usuarios, sellers, catálogo, carrito y pedidos.
 - **Datos:** permite almacenar y consultar la información mediante una base de datos.
 
-Además, el módulo de **Pedidos** se integra con sistemas externos como la **pasarela de pago** y el **servicio de envío**.
+Además, el módulo de **Pedidos** se integra con sistemas externos como la **pasarela de pago**, el **servicio de envío** y el **servicio de Facturación** (generación de comprobantes de pago).
